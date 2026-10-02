@@ -23,6 +23,13 @@ Built from the logo on the clinic's marble wall: a white tooth cradled by a thin
 These are a vector redraw of the wall logo; if the clinic has the original artwork, swap it in under the same names.
 
 ## Images
+### Homepage hero background
+The home hero is a full-width photo with the text on top. Replace these two files (same names) with your final photo:
+- `images/hero.jpg` — desktop, **2560 × 1100 px** (landscape). Keep the subject on the right half; the left half sits under the headline and a dark overlay.
+- `images/hero-mobile.jpg` — phones, **1080 × 1920 px** (portrait). The text covers the lower two-thirds.
+
+The current files are a blurred stand-in made from the clinic's treatment-room photo.
+
 `images/` also holds clinic photos taken from the Google Maps listing. They are small (about 600px wide), so replace them with the clinic's original files at the same names when possible. Confirm the clinic is happy for these photos to be used; some Google Maps photos are uploaded by visitors rather than the owner.
 
 ## To confirm with the clinic
