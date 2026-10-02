@@ -55,7 +55,7 @@
     </defs>
   </svg>
 
-  <header class="nav" data-nav>
+  <header class="nav nav--over" data-nav>
     <a class="logo" href="index.html" aria-label="บางกอกเดนทัลแคร์ — หน้าแรก">
       <img class="logo__dark" src="../images/logo.svg" alt="Bangkok Dental Care" width="578" height="196" />
     </a>
@@ -78,30 +78,33 @@
 
   <main id="main">
     <section class="hero">
-      <div class="hero__copy">
-        <p class="pill reveal" style="--d:0"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>เปิดทุกวัน · ถึง 20:00 น.</span></p>
-        <h1 class="reveal" style="--d:1">ทันตแพทย์ใจดี<br /><em>ทำฟันอย่างสบายใจ</em></h1>
-        <p class="lede reveal" style="--d:2">คลินิกทันตกรรมเฉพาะทาง ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 ใกล้ BTS อ่อนนุช เรารับฟัง อธิบายทุกขั้นตอนก่อนเริ่มรักษา และดูแลให้คุณสบายใจตลอดการรักษา</p>
-        <div class="actions reveal" style="--d:3">
-          <a class="btn" href="contact.html#book">นัดหมาย</a>
-          <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
-        </div>
-        <p class="rating reveal" style="--d:4"><span class="stars" aria-hidden="true">★★★★★</span> <b>4.7</b> จากรีวิว Google 388 รายการ</p>
-        <div class="ask reveal" style="--d:4">
-          <p class="ask__q">วันนี้ให้เราดูแลเรื่องไหนดี?</p>
-          <ul class="ask__list">
-              <li><a href="contact.html?service=checkup#book">ตรวจฟัน</a></li>
+      <picture class="hero__bg">
+        <source media="(max-width: 860px)" srcset="../images/hero-mobile.jpg" />
+        <img src="../images/hero.jpg" alt="" width="3200" height="1500" fetchpriority="high" />
+      </picture>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="pill reveal" style="--d:0"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>เปิดทุกวัน · ถึง 20:00 น.</span></p>
+          <h1 class="reveal" style="--d:1">ทันตแพทย์ใจดี<br /><em>ทำฟันอย่างสบายใจ</em></h1>
+          <p class="lede reveal" style="--d:2">คลินิกทันตกรรมเฉพาะทาง ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 ใกล้ BTS อ่อนนุช เรารับฟัง อธิบายทุกขั้นตอนก่อนเริ่มรักษา และดูแลให้คุณสบายใจตลอดการรักษา</p>
+          <div class="actions reveal" style="--d:3">
+            <a class="btn" href="contact.html#book">นัดหมาย</a>
+            <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+          </div>
+          <p class="rating reveal" style="--d:4"><span class="stars" aria-hidden="true">★★★★★</span> <b>4.7</b> จากรีวิว Google 388 รายการ</p>
+          <div class="ask reveal" style="--d:4">
+            <p class="ask__q">วันนี้ให้เราดูแลเรื่องไหนดี?</p>
+            <ul class="ask__list">
+                <li><a href="contact.html?service=checkup#book">ตรวจฟัน</a></li>
               <li><a href="contact.html?service=cleaning#book">ขูดหินปูน</a></li>
               <li><a href="contact.html?service=braces#book">จัดฟัน</a></li>
               <li><a href="contact.html?service=implant#book">รากฟันเทียม</a></li>
               <li><a href="contact.html?service=whitening#book">ฟอกสีฟัน</a></li>
               <li><a class="ask__urgent" href="contact.html?service=pain#book">ปวดฟัน</a></li>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-      <figure class="hero__photo reveal" style="--d:2">
-        <img src="../images/hero-photo.jpg" alt="ผู้ป่วยยิ้มระหว่างการตรวจฟัน" width="1000" height="800" fetchpriority="high" />
-      </figure>
     </section>
 
     <ul class="glance reveal" style="--d:5" aria-label="ข้อมูลคลินิก">

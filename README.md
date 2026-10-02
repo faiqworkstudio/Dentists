@@ -27,8 +27,12 @@ Built from the logo on the clinic's marble wall: a white tooth cradled by a thin
 These are a vector redraw of the wall logo; if the clinic has the original artwork, swap it in under the same names.
 
 ## Images
-### Homepage hero photo
-The home hero is a simple two-column layout: text on the left, a plain rounded photo on the right (no overlays). Replace `images/hero-photo.jpg` with a high-resolution, licensed photo at the same name — **1600 × 1280 px (5:4)** or larger. The current photo was supplied at 600 × 399 px, so it looks soft on large screens.
+### Homepage hero image
+The home hero is a full-width image with the text on its calm left side. The image is an artwork made for the site (not a photo): the clinic's marble wall with the gold crescent logo sign, soft window light and palm-leaf shadows.
+- `images/hero.jpg` — desktop, 3200 × 1500 px; keep the left ~45% calm and light, since the text sits there.
+- `images/hero-mobile.jpg` — phones, 1200 × 1600 px; the sign sits in the top third and the text sits below it.
+
+To use a photo instead, replace these two files with the same sizes and layout (subject on the right on desktop, at the top on phones).
 
 ## To confirm with the clinic
 - Have a native Thai speaker on the clinic team read through the Thai pages before launch.
