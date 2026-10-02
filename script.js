@@ -11,10 +11,21 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  /* ---------- Mobile menu ---------- */
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const setOpen = (open) => {
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+  toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
+  nav.querySelectorAll(".nav__links a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", (e) => e.key === "Escape" && setOpen(false));
+  document.addEventListener("click", (e) => !nav.contains(e.target) && setOpen(false));
+
   /* ---------- Open / closed pill (Asia/Bangkok) ---------- */
   const status = document.querySelector("[data-open-status]");
   const dot = document.querySelector(".pill__dot");
-  try {
+  if (status) try {
     const hour = Number(
       new Intl.DateTimeFormat("en-GB", { hour: "numeric", hourCycle: "h23", timeZone: "Asia/Bangkok" }).format(new Date())
     );
@@ -51,39 +62,41 @@
   /* ---------- Booking form ---------- */
   const form = document.querySelector("[data-book-form]");
   const note = document.querySelector("[data-form-note]");
-  form.elements.date.min = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok" }).format(new Date());
+  if (form) {
+    form.elements.date.min = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok" }).format(new Date());
 
-  form.addEventListener("input", (e) => {
-    if (e.target.classList.contains("is-invalid") && e.target.value) e.target.classList.remove("is-invalid");
-  });
+    form.addEventListener("input", (e) => {
+      if (e.target.classList.contains("is-invalid") && e.target.value) e.target.classList.remove("is-invalid");
+    });
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const required = [...form.querySelectorAll("[required]")];
-    const missing = required.filter((el) => !el.value.trim());
-    required.forEach((el) => el.classList.toggle("is-invalid", missing.includes(el)));
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const required = [...form.querySelectorAll("[required]")];
+      const missing = required.filter((el) => !el.value.trim());
+      required.forEach((el) => el.classList.toggle("is-invalid", missing.includes(el)));
 
-    if (missing.length) {
-      note.classList.remove("is-success");
-      note.textContent = "Please add your name, phone number and a preferred date.";
-      missing[0].focus();
-      return;
-    }
+      if (missing.length) {
+        note.classList.remove("is-success");
+        note.textContent = "Please add your name, phone number and a preferred date.";
+        missing[0].focus();
+        return;
+      }
 
-    const data = new FormData(form);
-    const [y, m, d] = data.get("date").split("-").map(Number);
-    const when = new Date(y, m - 1, d).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
-    note.classList.add("is-success");
-    note.innerHTML = "";
-    note.append(
-      `Thank you, ${data.get("name").trim()}. Your request: ${data.get("service")} on ${when} (${data.get("time").toLowerCase()}). `
-    );
-    const call = document.createElement("a");
-    call.href = "tel:+66641965596";
-    call.textContent = "Call 064 196 5596";
-    note.append(call, " to confirm your time.");
-    // TODO: send the request to the clinic (LINE OA, email or a form backend).
-  });
+      const data = new FormData(form);
+      const [y, m, d] = data.get("date").split("-").map(Number);
+      const when = new Date(y, m - 1, d).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+      note.classList.add("is-success");
+      note.innerHTML = "";
+      note.append(
+        `Thank you, ${data.get("name").trim()}. Your request: ${data.get("service")} on ${when} (${data.get("time").toLowerCase()}). `
+      );
+      const call = document.createElement("a");
+      call.href = "tel:+66641965596";
+      call.textContent = "Call 064 196 5596";
+      note.append(call, " to confirm your time.");
+      // TODO: send the request to the clinic (LINE OA, email or a form backend).
+    });
+  }
 
   /* ---------- Footer year ---------- */
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
