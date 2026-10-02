@@ -26,9 +26,9 @@ These are a vector redraw of the wall logo; if the clinic has the original artwo
 ### Homepage hero background
 The home hero is a full-width photo with the text on top. Replace these two files (same names) with your final photo:
 - `images/hero.jpg` — desktop, **2560 × 1100 px** (landscape). Keep the subject on the right half; the left half sits under the headline and a dark overlay.
-- `images/hero-mobile.jpg` — phones, **1080 × 1920 px** (portrait). The text covers the lower two-thirds.
+- `images/hero-mobile.jpg` — phones, **1080 × 1440 px** (portrait, 3:4), face in the upper half.
 
-The current files are a blurred stand-in made from the clinic's treatment-room photo.
+The current photo (patient in the dental chair) was supplied at 600 × 399 px and enlarged, so it looks soft on big screens — use a high-resolution copy at the same names, and make sure it's licensed for the clinic's use. On desktop the photo fills the right ~70% of the hero and fades into the dark left side under the text; on phones it shows at the top, above the text.
 
 `images/` also holds clinic photos taken from the Google Maps listing. They are small (about 600px wide), so replace them with the clinic's original files at the same names when possible. Confirm the clinic is happy for these photos to be used; some Google Maps photos are uploaded by visitors rather than the owner.
 
