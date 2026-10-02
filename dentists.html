@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Dentists · Bangkok Dental Care</title>
   <meta name="description" content="Specialist dentists in orthodontics, implants and oral surgery, prosthodontics, endodontics and general dentistry — described by patients as kind and gentle." />
-  <meta name="theme-color" content="#fbf8f3" />
+  <meta name="theme-color" content="#2c1811" />
+  <link rel="alternate" hreflang="en" href="/dentists.html" />
+  <link rel="alternate" hreflang="th" href="/th/dentists.html" />
+  <link rel="alternate" hreflang="x-default" href="/dentists.html" />
   <meta property="og:title" content="Our Dentists · Bangkok Dental Care" />
   <meta property="og:description" content="Specialist dentists in orthodontics, implants and oral surgery, prosthodontics, endodontics and general dentistry — described by patients as kind and gentle." />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="images/storefront.jpg" />
   <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700&family=Figtree:wght@400;500;600&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -39,6 +43,10 @@
       <a href="dentists.html" aria-current="page">Our dentists</a>
       <a href="clinic.html">The clinic</a>
       <a href="contact.html">Contact</a>
+      <span class="lang" role="group" aria-label="Language">
+        <a href="dentists.html" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a href="th/dentists.html" hreflang="th" lang="th">ไทย</a>
+      </span>
       <a class="btn btn--small nav__cta" href="contact.html#book">Book a visit</a>
     </nav>
   </header>
@@ -47,7 +55,7 @@
 
     <section class="page-hero">
       <div class="page-hero__copy">
-        <p class="eyebrow reveal" style="--d:0"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Our dentists <span lang="th">· ทันตแพทย์เฉพาะทาง</span></p>
+        <p class="eyebrow reveal" style="--d:0"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Our dentists</p>
         <h1 class="reveal" style="--d:1">The right specialist, <em>gentle hands.</em></h1>
         <p class="lede reveal" style="--d:2">Bangkok Dental Care is a dental specialist clinic. Each case is matched to the dentist trained for it — so your treatment is planned properly, done gently, and followed up by the same person.</p>
       </div>
@@ -60,44 +68,39 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Specialties <span lang="th">· สาขาเฉพาะทาง</span></p>
+        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Specialties</p>
         <h2>Five areas of care, <em>one friendly team.</em></h2>
       </header>
       <ul class="specs">
         <li class="spec reveal-on-scroll">
           <span class="spec__n">01</span>
-          <p class="spec__th" lang="th">จัดฟัน</p>
           <h3>Orthodontics</h3>
           <p>Metal braces, ceramic braces and clear aligners — from first assessment to retainers.</p>
         </li>
         <li class="spec reveal-on-scroll">
           <span class="spec__n">02</span>
-          <p class="spec__th" lang="th">ศัลยกรรมช่องปาก</p>
-          <h3>Implants & oral surgery</h3>
+          <h3>Implants &amp; oral surgery</h3>
           <p>Implant placement, extractions and wisdom teeth, planned with panoramic X-ray.</p>
         </li>
         <li class="spec reveal-on-scroll">
           <span class="spec__n">03</span>
-          <p class="spec__th" lang="th">ทันตกรรมประดิษฐ์</p>
           <h3>Prosthodontics</h3>
           <p>Crowns, bridges, veneers and dentures that restore function and appearance.</p>
         </li>
         <li class="spec reveal-on-scroll">
           <span class="spec__n">04</span>
-          <p class="spec__th" lang="th">รักษารากฟัน</p>
           <h3>Endodontics</h3>
           <p>Root canal treatment to relieve pain and keep your natural tooth.</p>
         </li>
         <li class="spec reveal-on-scroll">
           <span class="spec__n">05</span>
-          <p class="spec__th" lang="th">ทันตกรรมทั่วไป</p>
-          <h3>General & cosmetic</h3>
+          <h3>General &amp; cosmetic</h3>
           <p>Check-ups, scaling, fillings and whitening for everyday dental health.</p>
         </li>
         <li class="spec spec--cta reveal-on-scroll">
           <h3>Not sure who you need?</h3>
           <p>Book a check-up. We’ll take a look and guide you to the right specialist here in the clinic.</p>
-          <a class="btn btn--gold btn--small" href="contact.html#book">Book a check-up</a>
+          <a class="btn btn--gold btn--small" href="contact.html?service=checkup#book">Book a check-up</a>
         </li>
       </ul>
       <!-- TODO: add each dentist's name, photo and qualifications when the clinic provides them. -->
@@ -105,11 +108,11 @@
 
     <section class="section">
       <div class="words">
-        <header class="head">
-          <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>In patients’ words <span lang="th">· เสียงจากผู้ป่วย</span></p>
-          <h2>The words patients <em>use most.</em></h2>
-          <p class="head__aside">From the topics Google highlights across our 388 reviews.</p>
-        </header>
+      <header class="head">
+        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>In patients’ words</p>
+        <h2>The words patients <em>use most.</em></h2>
+        <p class="head__aside">From the topics Google highlights across our 388 reviews.</p>
+      </header>
         <div class="tally">
           <div class="tally__item reveal-on-scroll"><b>65</b><span>“kind doctor”</span></div>
           <div class="tally__item reveal-on-scroll"><b>53</b><span>“gentle doctor”</span></div>
@@ -121,7 +124,7 @@
 
     <section class="section reviews">
       <header class="head head--center">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Kind words <span lang="th">· รีวิวจากผู้ป่วย</span></p>
+        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Kind words</p>
         <h2>What our patients <em>tell others.</em></h2>
       </header>
       <div class="reviews__grid">
@@ -132,21 +135,21 @@
           <p class="score__l">from 388 Google reviews</p>
           <a class="link" href="https://www.google.com/maps/place/Bangkok+Dental+Care/@13.7054644,100.598665,17z/data=!4m8!3m7!1s0x30e29febcbc4d22b:0xd949c671bb64645d!8m2!3d13.7054644!4d100.6012453!9m1!1b1" target="_blank" rel="noopener">Read them all ↗</a>
         </div>
-        <blockquote class="quote reveal-on-scroll">
+        <blockquote class="quote reveal-on-scroll" lang="en">
           <p>“The clinic is clean, the doctor gives good advice, and the staff are lovely.”</p>
           <footer><span class="avatar" aria-hidden="true">IQ</span><span><b>Ikk Que</b><small>Local Guide</small></span></footer>
         </blockquote>
-        <blockquote class="quote reveal-on-scroll">
+        <blockquote class="quote reveal-on-scroll" lang="en">
           <p>“Doing braces here is good. Good price.”</p>
           <footer><span class="avatar" aria-hidden="true">MN</span><span><b>Mia Nguyen</b><small>Local Guide</small></span></footer>
         </blockquote>
-        <blockquote class="quote reveal-on-scroll">
+        <blockquote class="quote reveal-on-scroll" lang="en">
           <p>“Good environment. Friendly staff and professional treatment.”</p>
-          <footer><span class="avatar" aria-hidden="true">G</span><span><b>Google review</b><small>highlight</small></span></footer>
+          <footer><span class="avatar" aria-hidden="true">G</span><span><b>Google</b><small>Review highlight</small></span></footer>
         </blockquote>
-        <blockquote class="quote reveal-on-scroll">
+        <blockquote class="quote reveal-on-scroll" lang="en">
           <p>“Great service with decent price!”</p>
-          <footer><span class="avatar" aria-hidden="true">G</span><span><b>Google review</b><small>highlight</small></span></footer>
+          <footer><span class="avatar" aria-hidden="true">G</span><span><b>Google</b><small>Review highlight</small></span></footer>
         </blockquote>
       </div>
     </section>
@@ -157,7 +160,7 @@
     <div class="cta__inner">
       <img class="cta__mark" src="images/logo-mark.svg" alt="" width="196" height="196" loading="lazy" />
       <div class="cta__copy">
-        <p class="eyebrow eyebrow--light">Whenever you’re ready <span lang="th">· พร้อมดูแลคุณ</span></p>
+        <p class="eyebrow eyebrow--light">Whenever you’re ready</p>
         <h2>Come and say hello. <em>We’ll take good care of you.</em></h2>
         <p>Open every day until 8 PM, a short walk from BTS On Nut.</p>
       </div>
@@ -172,11 +175,11 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <img src="images/logo-light.svg" alt="Bangkok Dental Care" width="578" height="196" loading="lazy" />
-        <p lang="th">คลินิกทันตกรรมบางกอกเดนทัลแคร์<br />ทันตกรรมเฉพาะทาง · Dental Specialist Clinic</p>
+        <p>Dental specialist clinic<br />Licence no. 10103005661</p>
       </div>
       <div>
         <h3>Find us</h3>
-        <p>3rd Floor, Century the Movie Plaza 2<br />Sukhumvit Rd, Phra Khanong<br />Watthana, Bangkok 10110</p>
+        <p>3rd Floor, Century the Movie Plaza 2<br />Sukhumvit Rd, Phra Khanong Nuea<br />Watthana, Bangkok 10110</p>
       </div>
       <div>
         <h3>Opening hours</h3>
@@ -195,7 +198,7 @@
       </div>
     </div>
     <div class="footer__row">
-      <span>© <span data-year>2026</span> Bangkok Dental Care · Licence 10103005661</span>
+      <span>© <span data-year>2026</span> Bangkok Dental Care</span>
       <a href="https://www.google.com/maps/place/Bangkok+Dental+Care/@13.7054644,100.598665,17z/data=!4m8!3m7!1s0x30e29febcbc4d22b:0xd949c671bb64645d!8m2!3d13.7054644!4d100.6012453!9m1!1b1" target="_blank" rel="noopener">★ 4.7 from 388 Google reviews</a>
     </div>
   </footer>

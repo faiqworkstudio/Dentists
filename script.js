@@ -5,6 +5,9 @@
   // clinic's door signage; TODO: confirm the opening hour with the clinic.
   const HOURS = { open: 10, close: 20 };
 
+  const TH = document.documentElement.lang === "th";
+  const say = (en, th) => (TH ? th : en);
+
   /* ---------- Sticky nav ---------- */
   const nav = document.querySelector("[data-nav]");
   const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -30,9 +33,11 @@
       new Intl.DateTimeFormat("en-GB", { hour: "numeric", hourCycle: "h23", timeZone: "Asia/Bangkok" }).format(new Date())
     );
     if (hour >= HOURS.open && hour < HOURS.close) {
-      status.textContent = "Open now · until 8 PM";
+      status.textContent = say("Open now · until 8 PM", "เปิดอยู่ · ถึง 20:00 น.");
     } else {
-      status.textContent = hour < HOURS.open ? "Opens later today" : "Closed now · open tomorrow";
+      status.textContent = hour < HOURS.open
+        ? say("Opens later today", "เปิดวันนี้ · ยังไม่ถึงเวลาเปิด")
+        : say("Closed now · open tomorrow", "ปิดแล้ว · เปิดอีกครั้งพรุ่งนี้");
       dot.classList.add("is-closed");
     }
   } catch (_) {
@@ -82,23 +87,27 @@
 
       if (missing.length) {
         note.classList.remove("is-success");
-        note.textContent = "Please add your name, phone number and a preferred date.";
+        note.textContent = say("Please add your name, phone number and a preferred date.", "กรุณากรอกชื่อ เบอร์โทรศัพท์ และวันที่สะดวก");
         missing[0].focus();
         return;
       }
 
       const data = new FormData(form);
       const [y, m, d] = data.get("date").split("-").map(Number);
-      const when = new Date(y, m - 1, d).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+      const when = new Date(y, m - 1, d).toLocaleDateString(say("en-GB", "th-TH"), { weekday: "long", day: "numeric", month: "long" });
+      const name = data.get("name").trim();
       note.classList.add("is-success");
       note.innerHTML = "";
       note.append(
-        `Thank you, ${data.get("name").trim()}. Your request: ${data.get("service")} on ${when} (${data.get("time").toLowerCase()}). `
+        say(
+          `Thank you, ${name}. Your request: ${data.get("service")} on ${when} (${data.get("time").toLowerCase()}). `,
+          `ขอบคุณค่ะ คุณ${name} คำขอของคุณ: ${data.get("service")} ${when} (ช่วง${data.get("time")}) `
+        )
       );
       const call = document.createElement("a");
       call.href = "tel:+66641965596";
-      call.textContent = "Call 064 196 5596";
-      note.append(call, " to confirm your time.");
+      call.textContent = say("Call 064 196 5596", "โทร 064 196 5596");
+      note.append(call, say(" to confirm your time.", " เพื่อยืนยันเวลานัด"));
       // TODO: send the request to the clinic (LINE OA, email or a form backend).
     });
   }
