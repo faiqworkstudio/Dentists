@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bangkok Dental Care · On Nut, Sukhumvit</title>
-  <meta name="description" content="Bangkok Dental Care — a gentle neighbourhood dental clinic on the 3rd floor of Century the Movie Plaza 2, Sukhumvit (On Nut). Rated 4.7 from 388 Google reviews. Open until 8 PM." />
-  <meta name="theme-color" content="#0f2a28" />
+  <title>Bangkok Dental Care · Specialist Dental Clinic, BTS On Nut</title>
+  <meta name="description" content="Bangkok Dental Care — a specialist dental clinic on the 3rd floor of Century the Movie Plaza 2, BTS On Nut. Braces, clear aligners, implants, crowns, root canal, veneers and whitening. Rated 4.7 from 388 Google reviews. Open daily until 8 PM." />
+  <meta name="theme-color" content="#d2572a" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,300..700;1,400&family=Anuphan:wght@300;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,100&family=Figtree:wght@400;500;600;700&family=Mitr:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
@@ -17,6 +17,7 @@
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Bangkok Dental Care",
+    "alternateName": "คลินิกทันตกรรมบางกอกเดนทัลแคร์",
     "telephone": "+66641965596",
     "address": {
       "@type": "PostalAddress",
@@ -26,6 +27,13 @@
       "postalCode": "10110",
       "addressCountry": "TH"
     },
+    "geo": { "@type": "GeoCoordinates", "latitude": 13.7054644, "longitude": 100.6012453 },
+    "hasMap": "https://www.google.com/maps/place/Bangkok+Dental+Care/@13.7054644,100.6012453,17z",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "closes": "20:00"
+    }],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "388" }
   }
   </script>
@@ -33,252 +41,396 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Reusable brand mark: gold crescent moon cradling a tooth, with sparkles -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 64 64">
+        <path class="mark__moon" d="M30 5a27 27 0 1 0 0 54a32 32 0 0 1 0-54z" />
+        <path class="mark__tooth" d="M26.5 19.5c3.4-2.6 7-2.6 10.2-.3 3.2-2.3 6.8-2.3 10.2.3 4.3 3.4 3.4 9.7 1.3 15-1.3 3.4-2 13.3-5.6 13.3-2.6 0-2.7-8-5.9-8s-3.3 8-5.9 8c-3.6 0-4.3-9.9-5.6-13.3-2.1-5.3-3-11.6 1.3-15z" />
+        <path class="mark__spark" d="M52 6l1.4 4.1L57.5 11.5l-4.1 1.4L52 17l-1.4-4.1-4.1-1.4 4.1-1.4z" />
+        <path class="mark__spark" d="M58 19l.8 2.2 2.2.8-2.2.8L58 25l-.8-2.2-2.2-.8 2.2-.8z" />
+      </symbol>
+      <symbol id="spark" viewBox="0 0 24 24">
+        <path d="M12 0l2.6 8.4L24 12l-9.4 3.6L12 24l-2.6-8.4L0 12l9.4-3.6z" />
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ───────────── Header ───────────── -->
   <header class="nav" data-nav>
     <a class="brand" href="#top" aria-label="Bangkok Dental Care — home">
-      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M20 6c-4-3-11-3-13 3-2 6 1 11 2 16 1 6 2 10 5 10 3 0 3-7 6-7s3 7 6 7c3 0 4-4 5-10 1-5 4-10 2-16-2-6-9-6-13-3z" />
-      </svg>
-      <span class="brand__text">
-        <strong>Bangkok Dental Care</strong>
-        <small lang="th">คลินิกทันตกรรม บางกอก เดนทัล แคร์</small>
+      <svg class="brand__mark" aria-hidden="true"><use href="#mark" /></svg>
+      <span class="brand__word">
+        <strong>Bangkok</strong>
+        <small>Dental Care</small>
       </span>
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="#care">Care</a>
-      <a href="#voices">Patients</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#dentists">Our dentists</a>
+      <a href="#clinic">The clinic</a>
+      <a href="#reviews">Reviews</a>
       <a href="#visit">Visit</a>
-      <a class="btn btn--small" href="#book">Book a seat</a>
     </nav>
+    <a class="btn btn--small" href="#book">Book a visit</a>
   </header>
 
   <main id="main">
     <!-- ───────────── Hero ───────────── -->
     <section class="hero" id="top">
       <div class="hero__copy">
-        <p class="eyebrow reveal" style="--d:0">
-          <span class="dot" aria-hidden="true"></span>
-          <span data-open-status>Open today · until 8 PM</span>
+        <p class="pill reveal" style="--d:0">
+          <span class="pill__dot" aria-hidden="true"></span>
+          <span data-open-status>Open daily · until 8 PM</span>
         </p>
-        <h1 class="hero__title">
-          <span class="line reveal" style="--d:1">A gentler</span>
-          <span class="line reveal" style="--d:2"><em>chair</em> on</span>
-          <span class="line reveal" style="--d:3">Sukhumvit.</span>
+        <p class="hero__thai reveal" lang="th" style="--d:1">ทันตกรรมเพื่อความสวยงาม · ทันตกรรมเฉพาะทางครบวงจร</p>
+        <h1 class="hero__title reveal" style="--d:2">
+          Specialist dentists,<br />
+          <span class="hero__accent">gentle hands.</span>
         </h1>
-        <p class="hero__lede reveal" style="--d:4">
-          A neighbourhood clinic upstairs at Century the Movie Plaza&nbsp;2, On&nbsp;Nut —
-          where patients keep using the same two words for our dentists:
-          <mark>gentle</mark> and <mark>kind</mark>.
+        <p class="hero__lede reveal" style="--d:3">
+          From a first check-up to braces, implants and crowns — complete dental care
+          by specialist dentists, upstairs at Century the Movie Plaza&nbsp;2, a short walk from BTS&nbsp;On&nbsp;Nut.
         </p>
-        <div class="hero__cta reveal" style="--d:5">
-          <a class="btn" href="#book">Reserve your seat <span aria-hidden="true">→</span></a>
-          <a class="btn btn--ghost" href="tel:+66641965596">Call 064 196 5596</a>
+        <div class="hero__cta reveal" style="--d:4">
+          <a class="btn" href="#book">Book a consultation <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="tel:+66641965596">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            064 196 5596
+          </a>
         </div>
+        <ul class="hero__facts reveal" style="--d:5">
+          <li><b>4.7</b><span>★ on Google<br />388 reviews</span></li>
+          <li><b>8</b><span>treatments<br />under one roof</span></li>
+          <li><b>7</b><span>days a week<br />until 20:00</span></li>
+        </ul>
       </div>
 
-      <!-- Signature: the cinema ticket -->
-      <aside class="ticket reveal" style="--d:3" aria-label="Clinic at a glance">
-        <div class="ticket__stub">
-          <span class="ticket__admit">Admit one</span>
-          <span class="ticket__serial">Nº 10110</span>
-        </div>
-        <div class="ticket__body">
-          <p class="ticket__label">Now showing · Floor 3</p>
-          <p class="ticket__title">Your next smile</p>
-          <div class="ticket__rating">
-            <span class="ticket__score" data-count="4.7">4.7</span>
-            <span class="ticket__stars" aria-hidden="true">
-              <i style="--f:1"></i><i style="--f:1"></i><i style="--f:1"></i><i style="--f:1"></i><i style="--f:.7"></i>
-            </span>
-            <span class="ticket__count">388 Google reviews</span>
+      <div class="hero__visual reveal" style="--d:2">
+        <div class="hero__moon" aria-hidden="true"></div>
+        <figure class="photo photo--arch">
+          <img src="images/reception.jpg" alt="Bangkok Dental Care reception with the gold crescent logo on a marble wall" onerror="this.remove()" />
+          <div class="photo__fallback" aria-hidden="true">
+            <svg><use href="#mark" /></svg>
+            <span>Bangkok<small>Dental Care</small></span>
           </div>
-          <dl class="ticket__grid">
-            <div><dt>Venue</dt><dd>Century the Movie Plaza 2</dd></div>
-            <div><dt>Screen</dt><dd>3rd Floor</dd></div>
-            <div><dt>Last show</dt><dd>8:00 PM</dd></div>
-            <div><dt>Seat</dt><dd>The comfy one</dd></div>
-          </dl>
-          <div class="ticket__barcode" aria-hidden="true"></div>
+        </figure>
+        <div class="float float--rating">
+          <span class="float__score">4.7</span>
+          <span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <small>388 Google reviews</small>
+          </span>
         </div>
-      </aside>
-
-      <div class="hero__arc" aria-hidden="true"></div>
+        <div class="float float--quote">
+          <svg class="float__spark" aria-hidden="true"><use href="#spark" /></svg>
+          “Good environment, friendly staff and professional treatment.”
+        </div>
+        <div class="float float--licence">
+          <small>Licensed clinic</small>
+          <span lang="th">เลขที่ใบอนุญาต</span> 10103005661
+        </div>
+      </div>
     </section>
 
-    <!-- ───────────── Marquee ───────────── -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Gentle doctors</span><span>✦</span><span>Lovely staff</span><span>✦</span><span>Scaling &amp; cleaning</span><span>✦</span><span>Braces</span><span>✦</span><span>Decent prices</span><span>✦</span><span lang="th">ยิ้มอย่างมั่นใจ</span><span>✦</span>
-        <span>Gentle doctors</span><span>✦</span><span>Lovely staff</span><span>✦</span><span>Scaling &amp; cleaning</span><span>✦</span><span>Braces</span><span>✦</span><span>Decent prices</span><span>✦</span><span lang="th">ยิ้มอย่างมั่นใจ</span><span>✦</span>
-      </div>
-    </div>
+    <!-- ───────────── Trust strip ───────────── -->
+    <ul class="trust" aria-label="Clinic standards">
+      <li><svg aria-hidden="true"><use href="#spark" /></svg>Specialist dentists</li>
+      <li><svg aria-hidden="true"><use href="#spark" /></svg>Panoramic X-ray on site</li>
+      <li><svg aria-hidden="true"><use href="#spark" /></svg>Autoclave-sterilised instruments</li>
+      <li><svg aria-hidden="true"><use href="#spark" /></svg>Clear price before treatment</li>
+      <li><svg aria-hidden="true"><use href="#spark" /></svg>English &amp; Thai spoken</li>
+    </ul>
 
-    <!-- ───────────── Care / services ───────────── -->
-    <section class="care" id="care">
-      <header class="section-head">
-        <p class="kicker">01 — The programme</p>
-        <h2>Everyday dentistry,<br /><em>done unhurried.</em></h2>
-        <p class="section-head__aside">Pick a feature. Every visit starts with a look, a plan, and a price before anything begins.</p>
+    <!-- ───────────── Treatments ───────────── -->
+    <section class="treatments" id="treatments">
+      <header class="head">
+        <p class="eyebrow">Treatments <span lang="th">· บริการของเรา</span></p>
+        <h2>Everything your smile needs, <em>in one clinic.</em></h2>
+        <p class="head__aside">Every treatment begins with an examination, an honest plan and a price — before anything starts.</p>
       </header>
 
-      <ol class="care__list">
-        <li class="card reveal-on-scroll">
-          <span class="card__num">A</span>
-          <h3>Scaling &amp; polish</h3>
-          <p>A thorough clean above and below the gumline — the annual reset most patients come in for.</p>
-          <span class="card__tag">Most booked</span>
+      <div class="feature-row">
+        <article class="feature reveal-on-scroll">
+          <p class="feature__th" lang="th">รากฟันเทียม</p>
+          <h3>Dental implants</h3>
+          <p>A permanent, natural-looking replacement for a missing tooth — planned with on-site panoramic X-ray.</p>
+          <p class="feature__price"><small>from</small> ฿40,000</p>
+          <span class="feature__moon" aria-hidden="true"></span>
+        </article>
+        <article class="feature feature--light reveal-on-scroll">
+          <p class="feature__th" lang="th">ครอบฟันสีขาว</p>
+          <h3>Ceramic &amp; zirconia crowns</h3>
+          <p>Tooth-coloured crowns that restore strength and shape to cracked, worn or root-treated teeth.</p>
+          <p class="feature__price"><small>from</small> ฿15,000</p>
+          <span class="feature__moon" aria-hidden="true"></span>
+        </article>
+      </div>
+
+      <ul class="grid">
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M6 22c6 4 12 6 18 6s12-2 18-6M10 24v6M17 26v6M24 27v6M31 26v6M38 24v6"/><rect x="13" y="21" width="6" height="5" rx="1"/><rect x="29" y="21" width="6" height="5" rx="1"/></svg>
+          </span>
+          <h3>Braces &amp; clear aligners</h3>
+          <p lang="th">จัดฟัน</p>
         </li>
-        <li class="card reveal-on-scroll">
-          <span class="card__num">B</span>
-          <h3>Braces &amp; alignment</h3>
-          <p>Orthodontic consultations, fitting and regular adjustment visits, with clear pricing up front.</p>
-          <span class="card__tag">Patient favourite</span>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M14 10c4-3 7-3 10 0 3-3 6-3 10 0 5 4 3 11 1 17-1 4-2 13-6 13-3 0-2-8-5-8s-2 8-5 8c-4 0-5-9-6-13-2-6-4-13 1-17z"/><path d="M21 22v12M27 22v12"/></svg>
+          </span>
+          <h3>Root canal treatment</h3>
+          <p lang="th">รักษารากฟัน</p>
         </li>
-        <li class="card reveal-on-scroll">
-          <span class="card__num">C</span>
-          <h3>Fillings &amp; repair</h3>
-          <p>Tooth-coloured restorations for cavities and chips — and a follow-up if anything doesn’t feel right.</p>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M10 18c0-5 6-8 14-8s14 3 14 8v6c0 8-6 14-14 14S10 32 10 24z"/><path d="M16 20h16M18 26h12"/></svg>
+          </span>
+          <h3>Veneers</h3>
+          <p lang="th">วีเนียร์</p>
         </li>
-        <li class="card reveal-on-scroll">
-          <span class="card__num">D</span>
-          <h3>Check-ups &amp; advice</h3>
-          <p>An honest look at what needs doing now, what can wait, and how to keep it that way at home.</p>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M14 12c4-3 7-3 10 0 3-3 6-3 10 0 5 4 3 11 1 17-1 4-2 11-6 11-3 0-2-7-5-7s-2 7-5 7c-4 0-5-7-6-11-2-6-4-13 1-17z"/><path d="M38 6l1 3 3 1-3 1-1 3-1-3-3-1 3-1zM8 30l.8 2.2L11 33l-2.2.8L8 36l-.8-2.2L5 33l2.2-.8z"/></svg>
+          </span>
+          <h3>Teeth whitening</h3>
+          <p lang="th">ฟอกสีฟัน</p>
         </li>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M14 10c4-3 7-3 10 0 3-3 6-3 10 0 5 4 3 11 1 17-1 4-2 13-6 13-3 0-2-8-5-8s-2 8-5 8c-4 0-5-9-6-13-2-6-4-13 1-17z"/><circle cx="29" cy="18" r="4"/></svg>
+          </span>
+          <h3>Tooth-coloured fillings</h3>
+          <p lang="th">อุดฟัน</p>
+        </li>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 40L30 18M30 18l4-8 6-2-2 6-8 4"/><path d="M14 12c3-2 5-2 7 0M26 34c3 1 6 1 9-1"/></svg>
+          </span>
+          <h3>Scaling &amp; cleaning</h3>
+          <p lang="th">ขูดหินปูน</p>
+        </li>
+        <li class="tile reveal-on-scroll">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M6 26c0-8 8-14 18-14s18 6 18 14"/><path d="M10 26h28v4c0 4-6 8-14 8s-14-4-14-8z"/><path d="M16 26v-5M22 26v-6M28 26v-6M34 26v-5"/></svg>
+          </span>
+          <h3>Dentures</h3>
+          <p lang="th">ฟันปลอม</p>
+        </li>
+        <li class="tile tile--cta reveal-on-scroll">
+          <h3>Not sure what you need?</h3>
+          <p>Start with a check-up and X-ray. We’ll explain every option.</p>
+          <a class="link" href="#book">Book a check-up →</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ───────────── Dentists ───────────── -->
+    <section class="dentists" id="dentists">
+      <div class="dentists__inner">
+        <header class="head head--light">
+          <p class="eyebrow">Our dentists <span lang="th">· ทันตแพทย์เฉพาะทาง</span></p>
+          <h2>Treated by the right specialist, <em>every time.</em></h2>
+        </header>
+
+        <div class="dentists__layout">
+          <div class="dentists__copy">
+            <p class="dentists__lede">
+              Braces are fitted by a dentist who does braces. Implants are placed by one who places implants.
+              Each case at Bangkok Dental Care goes to the specialist trained for it — so treatment is planned
+              properly, done carefully and followed up by the same hands.
+            </p>
+            <div class="words" aria-label="What patients say most in Google reviews">
+              <span class="words__item"><b>65</b> patients call our dentists <em>kind</em></span>
+              <span class="words__item"><b>53</b> call them <em>gentle</em></span>
+              <span class="words__item"><b>27</b> mention our <em>lovely staff</em></span>
+            </div>
+          </div>
+
+          <ul class="specialists">
+            <li class="spec reveal-on-scroll">
+              <span class="spec__n">01</span>
+              <div>
+                <h3>Orthodontics</h3>
+                <p>Metal braces, ceramic braces and clear aligners.</p>
+              </div>
+            </li>
+            <li class="spec reveal-on-scroll">
+              <span class="spec__n">02</span>
+              <div>
+                <h3>Implants &amp; oral surgery</h3>
+                <p>Implant placement, extractions and wisdom teeth.</p>
+              </div>
+            </li>
+            <li class="spec reveal-on-scroll">
+              <span class="spec__n">03</span>
+              <div>
+                <h3>Prosthodontics</h3>
+                <p>Crowns, bridges, veneers and dentures.</p>
+              </div>
+            </li>
+            <li class="spec reveal-on-scroll">
+              <span class="spec__n">04</span>
+              <div>
+                <h3>Endodontics</h3>
+                <p>Root canal treatment to save natural teeth.</p>
+              </div>
+            </li>
+            <li class="spec reveal-on-scroll">
+              <span class="spec__n">05</span>
+              <div>
+                <h3>General &amp; cosmetic</h3>
+                <p>Check-ups, scaling, fillings and whitening.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- TODO: add each dentist's name, photo and qualifications when the clinic provides them. -->
+      </div>
+    </section>
+
+    <!-- ───────────── Clinic ───────────── -->
+    <section class="clinic" id="clinic">
+      <header class="head">
+        <p class="eyebrow">The clinic <span lang="th">· คลินิกของเรา</span></p>
+        <h2>Bright, calm and <em>spotlessly clean.</em></h2>
+        <p class="head__aside">Marble walls, warm orange chairs and modern equipment — designed so your visit feels easy.</p>
+      </header>
+
+      <div class="gallery">
+        <figure class="photo photo--a reveal-on-scroll">
+          <img src="images/treatment-room.jpg" alt="Treatment room with an orange dental chair" loading="lazy" onerror="this.remove()" />
+          <div class="photo__fallback photo__fallback--chair" aria-hidden="true"><svg viewBox="0 0 120 90"><path d="M20 60h55l18-22h10M30 60V30c0-6 4-10 10-10h4v28h30l10 12M48 60v14M30 74h40"/><circle cx="100" cy="24" r="6"/><path d="M100 30v8"/></svg></div>
+          <figcaption>Treatment rooms</figcaption>
+        </figure>
+        <figure class="photo photo--b reveal-on-scroll">
+          <img src="images/xray.jpg" alt="Panoramic dental X-ray machine" loading="lazy" onerror="this.remove()" />
+          <div class="photo__fallback photo__fallback--plain" aria-hidden="true"><svg viewBox="0 0 120 90"><rect x="40" y="10" width="40" height="70" rx="6"/><path d="M40 30h-20v20h20M80 30h20v20H80"/><circle cx="60" cy="30" r="8"/></svg></div>
+          <figcaption>Panoramic X-ray</figcaption>
+        </figure>
+        <figure class="photo photo--c reveal-on-scroll">
+          <img src="images/sterilisation.jpg" alt="Instruments being loaded into an autoclave steriliser" loading="lazy" onerror="this.remove()" />
+          <div class="photo__fallback photo__fallback--plain" aria-hidden="true"><svg viewBox="0 0 120 90"><rect x="22" y="16" width="76" height="58" rx="8"/><circle cx="52" cy="45" r="18"/><path d="M82 30v6M82 44v6M82 58v6"/></svg></div>
+          <figcaption>Autoclave sterilisation</figcaption>
+        </figure>
+        <figure class="photo photo--d reveal-on-scroll">
+          <img src="images/waiting-area.jpg" alt="Waiting area with orange armchairs" loading="lazy" onerror="this.remove()" />
+          <div class="photo__fallback photo__fallback--chair" aria-hidden="true"><svg viewBox="0 0 120 90"><path d="M30 70V40c0-8 6-14 14-14h32c8 0 14 6 14 14v30M24 50h72v12H24zM34 62v12M86 62v12"/></svg></div>
+          <figcaption>Waiting lounge</figcaption>
+        </figure>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal-on-scroll"><span>1</span><h3>Examine</h3><p>Check-up and X-ray to see the whole picture.</p></li>
+        <li class="step reveal-on-scroll"><span>2</span><h3>Plan &amp; price</h3><p>Your options explained, with the cost agreed up front.</p></li>
+        <li class="step reveal-on-scroll"><span>3</span><h3>Treat</h3><p>Gentle treatment by the right specialist.</p></li>
+        <li class="step reveal-on-scroll"><span>4</span><h3>Follow up</h3><p>Reviews and adjustments until it feels right.</p></li>
       </ol>
     </section>
 
-    <!-- ───────────── Voices / reviews ───────────── -->
-    <section class="voices" id="voices">
-      <div class="voices__inner">
-        <header class="section-head section-head--light">
-          <p class="kicker">02 — The reviews</p>
-          <h2>What the <em>audience</em> said.</h2>
-        </header>
-
-        <div class="voices__stats">
-          <div class="stat reveal-on-scroll"><span class="stat__n">65</span><span class="stat__l">mention a <b>kind doctor</b></span></div>
-          <div class="stat reveal-on-scroll"><span class="stat__n">53</span><span class="stat__l">mention a <b>gentle doctor</b></span></div>
-          <div class="stat reveal-on-scroll"><span class="stat__n">27</span><span class="stat__l">mention <b>lovely staff</b></span></div>
-          <div class="stat reveal-on-scroll"><span class="stat__n">18</span><span class="stat__l">come in for <b>scaling</b></span></div>
-        </div>
-
-        <div class="quotes">
-          <blockquote class="quote quote--big reveal-on-scroll">
-            <p>“Good environment. Friendly staff and professional treatment.”</p>
-            <footer>Google review highlight</footer>
-          </blockquote>
-          <blockquote class="quote reveal-on-scroll">
-            <p>“The clinic is clean, the doctor gives good advice, and the staff are lovely.”</p>
-            <footer>Ikk Que · Local Guide</footer>
-          </blockquote>
-          <blockquote class="quote reveal-on-scroll">
-            <p>“Doing braces here is good. Good price.”</p>
-            <footer>Mia Nguyen · Local Guide</footer>
-          </blockquote>
-          <blockquote class="quote reveal-on-scroll">
-            <p>“Great service with decent price!”</p>
-            <footer>Google review highlight</footer>
-          </blockquote>
-        </div>
-
-        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Bangkok+Dental+Care+Century+the+Movie+Plaza+2" target="_blank" rel="noopener">
-          Read all 388 reviews on Google <span aria-hidden="true">↗</span>
-        </a>
+    <!-- ───────────── Reviews ───────────── -->
+    <section class="reviews" id="reviews">
+      <div class="reviews__score reveal-on-scroll">
+        <svg class="reviews__mark" aria-hidden="true"><use href="#mark" /></svg>
+        <p class="reviews__big">4.7</p>
+        <p class="stars stars--big" aria-label="4.7 out of 5 stars">★★★★★</p>
+        <p>from 388 Google reviews</p>
+        <a class="link" href="https://www.google.com/maps/place/Bangkok+Dental+Care/@13.7054644,100.598665,17z/data=!4m8!3m7!1s0x30e29febcbc4d22b:0xd949c671bb64645d!8m2!3d13.7054644!4d100.6012453!9m1!1b1" target="_blank" rel="noopener">Read them on Google ↗</a>
+      </div>
+      <div class="reviews__list">
+        <blockquote class="review reveal-on-scroll">
+          <p>“The clinic is clean, the doctor gives good advice, and the staff are lovely.”</p>
+          <footer><span class="avatar" aria-hidden="true">IQ</span>Ikk Que · Local Guide</footer>
+        </blockquote>
+        <blockquote class="review reveal-on-scroll">
+          <p>“Doing braces here is good. Good price.”</p>
+          <footer><span class="avatar" aria-hidden="true">MN</span>Mia Nguyen · Local Guide</footer>
+        </blockquote>
+        <blockquote class="review reveal-on-scroll">
+          <p>“Great service with decent price!”</p>
+          <footer><span class="avatar" aria-hidden="true">G</span>Google review highlight</footer>
+        </blockquote>
+        <blockquote class="review reveal-on-scroll">
+          <p>“Good environment. Friendly staff and professional treatment.”</p>
+          <footer><span class="avatar" aria-hidden="true">G</span>Google review highlight</footer>
+        </blockquote>
       </div>
     </section>
 
     <!-- ───────────── Book ───────────── -->
     <section class="book" id="book">
-      <header class="section-head">
-        <p class="kicker">03 — Box office</p>
-        <h2>Reserve a seat.<br /><em>We’ll call to confirm.</em></h2>
-      </header>
+      <div class="book__panel">
+        <div class="book__intro">
+          <p class="eyebrow eyebrow--light">Book a visit <span lang="th">· นัดหมาย</span></p>
+          <h2>Book your visit. <em>We’ll take it from there.</em></h2>
+          <p>Prefer to talk now? Call the front desk — we answer every day until 8 PM.</p>
+          <a class="book__phone" href="tel:+66641965596">064 196 5596</a>
+          <svg class="book__mark" aria-hidden="true"><use href="#mark" /></svg>
+        </div>
 
-      <div class="book__grid">
         <form class="form" data-book-form novalidate>
+          <div class="field-row">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="08x xxx xxxx" required />
+            </label>
+          </div>
           <label class="field">
-            <span>Your name</span>
-            <input name="name" type="text" autocomplete="name" placeholder="e.g. Ploy S." required />
+            <span>Treatment</span>
+            <select name="service">
+              <option>Check-up &amp; X-ray</option>
+              <option>Scaling &amp; cleaning</option>
+              <option>Braces / clear aligners</option>
+              <option>Dental implant</option>
+              <option>Crown / veneer</option>
+              <option>Root canal</option>
+              <option>Whitening</option>
+              <option>Filling</option>
+              <option>Dentures</option>
+              <option>Tooth pain — as soon as possible</option>
+            </select>
           </label>
-          <label class="field">
-            <span>Phone</span>
-            <input name="phone" type="tel" autocomplete="tel" placeholder="08x xxx xxxx" required />
-          </label>
-          <fieldset class="field field--chips">
-            <legend>What’s the visit for?</legend>
-            <label class="chip"><input type="radio" name="service" value="Scaling & polish" checked /><span>Scaling</span></label>
-            <label class="chip"><input type="radio" name="service" value="Braces consult" /><span>Braces</span></label>
-            <label class="chip"><input type="radio" name="service" value="Filling" /><span>Filling</span></label>
-            <label class="chip"><input type="radio" name="service" value="Check-up" /><span>Check-up</span></label>
-          </fieldset>
           <div class="field-row">
             <label class="field">
               <span>Preferred date</span>
               <input name="date" type="date" required />
             </label>
-            <label class="field">
-              <span>Time</span>
-              <select name="time">
-                <option>Morning</option>
-                <option selected>Afternoon</option>
-                <option>Evening (before 8 PM)</option>
-              </select>
-            </label>
+            <fieldset class="field">
+              <legend>Time</legend>
+              <div class="seg">
+                <label><input type="radio" name="time" value="Morning" /><span>AM</span></label>
+                <label><input type="radio" name="time" value="Afternoon" checked /><span>PM</span></label>
+                <label><input type="radio" name="time" value="Evening" /><span>Eve</span></label>
+              </div>
+            </fieldset>
           </div>
-          <button class="btn btn--block" type="submit">Print my ticket</button>
-          <p class="form__note" data-form-note role="status" aria-live="polite">No payment, no account. This is a request — the front desk confirms by phone.</p>
+          <button class="btn btn--cream btn--block" type="submit">Request appointment</button>
+          <p class="form__note" data-form-note role="status" aria-live="polite">No payment needed. Appointments are confirmed by phone.</p>
         </form>
-
-        <!-- Live ticket preview -->
-        <div class="pass" data-pass aria-live="polite">
-          <div class="pass__top">
-            <span>Bangkok Dental Care</span>
-            <span>Floor 3</span>
-          </div>
-          <p class="pass__feature" data-pass-service>Scaling &amp; polish</p>
-          <dl class="pass__meta">
-            <div><dt>Guest</dt><dd data-pass-name>Your name</dd></div>
-            <div><dt>Date</dt><dd data-pass-date>—</dd></div>
-            <div><dt>Session</dt><dd data-pass-time>Afternoon</dd></div>
-          </dl>
-          <div class="pass__tear" aria-hidden="true"></div>
-          <p class="pass__foot">Present at reception · Century the Movie Plaza 2</p>
-          <span class="pass__stamp" data-pass-stamp aria-hidden="true">Requested</span>
-        </div>
       </div>
     </section>
 
     <!-- ───────────── Visit ───────────── -->
     <section class="visit" id="visit">
       <div class="visit__info">
-        <p class="kicker">04 — Getting here</p>
-        <h2>Upstairs from<br /><em>the movies.</em></h2>
+        <p class="eyebrow">Visit us <span lang="th">· การเดินทาง</span></p>
+        <h2>3rd floor, Century the Movie Plaza&nbsp;2.</h2>
+        <p class="visit__th" lang="th">ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 อ่อนนุช</p>
 
         <dl class="visit__list">
-          <div>
-            <dt>Address</dt>
-            <dd>3rd Floor, Century the Movie Plaza 2<br />Sukhumvit Rd, Phra Khanong, Watthana<br />Bangkok 10110</dd>
-          </div>
-          <div>
-            <dt lang="th">ที่อยู่</dt>
-            <dd lang="th" class="th">ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 อ่อนนุช</dd>
-          </div>
-          <div>
-            <dt>Hours</dt>
-            <dd>Open today until 8:00 PM<br /><small>Call ahead for public holidays.</small></dd>
-          </div>
-          <div>
-            <dt>Phone</dt>
-            <dd><a href="tel:+66641965596">064 196 5596</a></dd>
-          </div>
-          <div>
-            <dt>Plus code</dt>
-            <dd><code>PJ42+5F Bangkok</code></dd>
-          </div>
+          <div><dt>Address</dt><dd>Sukhumvit Rd, Phra Khanong, Watthana, Bangkok 10110</dd></div>
+          <div><dt>Getting here</dt><dd>BTS On Nut — walk into Century the Movie Plaza and take the escalator to floor 3.</dd></div>
+          <div><dt>Hours</dt><dd>Open daily · until 20:00</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+66641965596">064 196 5596</a></dd></div>
+          <div><dt>Plus code</dt><dd>PJ42+5F Bangkok</dd></div>
         </dl>
 
         <div class="hero__cta">
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Bangkok+Dental+Care+Century+the+Movie+Plaza+2" target="_blank" rel="noopener">Get directions <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=13.7054644,100.6012453" target="_blank" rel="noopener">Get directions ↗</a>
           <!-- TODO: replace with the clinic's exact Facebook page URL -->
           <a class="btn btn--ghost" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
         </div>
@@ -286,20 +438,25 @@
 
       <div class="visit__map">
         <iframe
-          title="Map to Bangkok Dental Care"
+          title="Map showing Bangkok Dental Care at Century the Movie Plaza 2"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Bangkok+Dental+Care,+Century+the+Movie+Plaza+2,+Sukhumvit,+Bangkok&output=embed"></iframe>
-        <span class="visit__pin">BTS On Nut · a short walk</span>
+          src="https://www.google.com/maps?q=13.7054644,100.6012453&z=17&output=embed"></iframe>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="footer__big">Smile<em>.</em></p>
+    <div class="footer__top">
+      <a class="brand brand--light" href="#top" aria-label="Bangkok Dental Care — back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#mark" /></svg>
+        <span class="brand__word"><strong>Bangkok</strong><small>Dental Care</small></span>
+      </a>
+      <p lang="th">คลินิกทันตกรรมบางกอกเดนทัลแคร์<br />ทันตกรรมเฉพาะทาง · Dental Specialist Clinic</p>
+    </div>
     <div class="footer__row">
-      <span>© <span data-year>2026</span> Bangkok Dental Care</span>
-      <span lang="th">คลินิกทันตกรรม บางกอก เดนทัล แคร์</span>
+      <span>© <span data-year>2026</span> Bangkok Dental Care · Licence 10103005661</span>
+      <a href="tel:+66641965596">064 196 5596</a>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>

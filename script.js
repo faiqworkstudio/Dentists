@@ -1,20 +1,19 @@
 (() => {
-  const root = document.documentElement;
-  root.classList.remove("no-js");
+  document.documentElement.classList.remove("no-js");
 
-  // Clinic hours in Bangkok time. Closing time is from the Google listing;
-  // TODO: confirm opening time and any closed days with the clinic.
+  // Clinic hours in Bangkok time. Closing time (20:00, open daily) is from the
+  // clinic's door signage; TODO: confirm the opening hour with the clinic.
   const HOURS = { open: 10, close: 20 };
 
-  /* ---------- Sticky nav shadow ---------- */
+  /* ---------- Sticky nav ---------- */
   const nav = document.querySelector("[data-nav]");
   const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 12);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* ---------- Open / closed badge (Asia/Bangkok) ---------- */
+  /* ---------- Open / closed pill (Asia/Bangkok) ---------- */
   const status = document.querySelector("[data-open-status]");
-  const dot = document.querySelector(".eyebrow .dot");
+  const dot = document.querySelector(".pill__dot");
   try {
     const hour = Number(
       new Intl.DateTimeFormat("en-GB", { hour: "numeric", hourCycle: "h23", timeZone: "Asia/Bangkok" }).format(new Date())
@@ -26,7 +25,7 @@
       dot.classList.add("is-closed");
     }
   } catch (_) {
-    /* keep the static fallback text */
+    /* keep the static text */
   }
 
   /* ---------- Scroll reveals with stagger ---------- */
@@ -37,56 +36,26 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const siblings = [...entry.target.parentElement.children].filter((el) => el.classList.contains("reveal-on-scroll"));
-          entry.target.style.setProperty("--stagger", `${siblings.indexOf(entry.target) * 90}ms`);
+          entry.target.style.setProperty("--stagger", `${siblings.indexOf(entry.target) * 80}ms`);
           entry.target.classList.add("is-in");
           io.unobserve(entry.target);
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
     );
     items.forEach((el) => io.observe(el));
   } else {
     items.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---------- Booking form → live ticket ---------- */
+  /* ---------- Booking form ---------- */
   const form = document.querySelector("[data-book-form]");
-  const pass = document.querySelector("[data-pass]");
   const note = document.querySelector("[data-form-note]");
-  const out = {
-    name: pass.querySelector("[data-pass-name]"),
-    service: pass.querySelector("[data-pass-service]"),
-    date: pass.querySelector("[data-pass-date]"),
-    time: pass.querySelector("[data-pass-time]"),
-  };
-
-  const dateInput = form.elements.date;
-  const todayISO = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok" }).format(new Date());
-  dateInput.min = todayISO;
-
-  const fmtDate = (value) => {
-    if (!value) return "—";
-    const [y, m, d] = value.split("-").map(Number);
-    return new Date(y, m - 1, d).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
-  };
-
-  const render = () => {
-    const data = new FormData(form);
-    out.name.textContent = data.get("name").trim() || "Your name";
-    out.service.textContent = data.get("service");
-    out.date.textContent = fmtDate(data.get("date"));
-    out.time.textContent = data.get("time");
-    pass.classList.remove("is-bump");
-    void pass.offsetWidth; // restart animation
-    pass.classList.add("is-bump");
-  };
+  form.elements.date.min = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok" }).format(new Date());
 
   form.addEventListener("input", (e) => {
     if (e.target.classList.contains("is-invalid") && e.target.value) e.target.classList.remove("is-invalid");
-    pass.classList.remove("is-stamped");
-    render();
   });
-  form.addEventListener("change", render);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -96,20 +65,25 @@
 
     if (missing.length) {
       note.classList.remove("is-success");
-      note.textContent = "Just need your name, phone and a preferred date.";
+      note.textContent = "Please add your name, phone number and a preferred date.";
       missing[0].focus();
       return;
     }
 
-    render();
-    pass.classList.add("is-stamped");
+    const data = new FormData(form);
+    const [y, m, d] = data.get("date").split("-").map(Number);
+    const when = new Date(y, m - 1, d).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
     note.classList.add("is-success");
-    note.innerHTML = 'Ticket printed. To lock in your seat, call <a href="tel:+66641965596">064&nbsp;196&nbsp;5596</a> and mention your preferred time.';
-    // TODO: send this request to the clinic (LINE OA, email or a form backend).
+    note.innerHTML = "";
+    note.append(
+      `Thank you, ${data.get("name").trim()}. Your request: ${data.get("service")} on ${when} (${data.get("time").toLowerCase()}). `
+    );
+    const call = document.createElement("a");
+    call.href = "tel:+66641965596";
+    call.textContent = "Call 064 196 5596";
+    note.append(call, " to confirm your time.");
+    // TODO: send the request to the clinic (LINE OA, email or a form backend).
   });
-
-  render();
-  pass.classList.remove("is-bump");
 
   /* ---------- Footer year ---------- */
   document.querySelector("[data-year]").textContent = new Date().getFullYear();
