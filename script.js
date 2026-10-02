@@ -65,6 +65,11 @@
   if (form) {
     form.elements.date.min = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Bangkok" }).format(new Date());
 
+    // Preselect the treatment chosen in the home page "What brings you in?" links
+    const wanted = new URLSearchParams(location.search).get("service");
+    const option = wanted && form.querySelector(`option[data-key="${CSS.escape(wanted)}"]`);
+    if (option) option.selected = true;
+
     form.addEventListener("input", (e) => {
       if (e.target.classList.contains("is-invalid") && e.target.value) e.target.classList.remove("is-invalid");
     });
