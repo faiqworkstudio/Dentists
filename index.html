@@ -55,10 +55,9 @@
     </defs>
   </svg>
 
-  <header class="nav nav--over" data-nav>
+  <header class="nav" data-nav>
     <a class="logo" href="index.html" aria-label="Bangkok Dental Care — home">
       <img class="logo__dark" src="images/logo.svg" alt="Bangkok Dental Care" width="578" height="196" />
-      <img class="logo__light" src="images/logo-light.svg" alt="" width="578" height="196" />
     </a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
       <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
@@ -79,41 +78,30 @@
 
   <main id="main">
     <section class="hero">
-      <picture class="hero__bg">
-        <source media="(max-width: 860px)" srcset="images/hero-mobile.jpg" />
-        <img src="images/hero.jpg" alt="" fetchpriority="high" />
-      </picture>
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <p class="hello reveal" style="--d:0">
-            <span class="pill"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>Open every day · until 8 PM</span></span>
-          </p>
-          <h1 class="reveal" style="--d:1">Kind dentists,<br /><em>calm visits.</em></h1>
-          <p class="lede reveal" style="--d:2">A specialist dental clinic upstairs at Century the Movie Plaza&nbsp;2, by BTS&nbsp;On&nbsp;Nut. We listen, explain everything before we start, and keep you comfortable the whole way.</p>
-          <div class="actions reveal" style="--d:3">
-            <a class="btn btn--gold" href="contact.html#book">Book a visit</a>
-            <a class="btn btn--glass" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
-          </div>
-          <div class="ask reveal" style="--d:4">
-            <p class="ask__q">What brings you in today?</p>
-            <ul class="ask__list">
+      <div class="hero__copy">
+        <p class="pill reveal" style="--d:0"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>Open every day · until 8 PM</span></p>
+        <h1 class="reveal" style="--d:1">Kind dentists,<br /><em>calm visits.</em></h1>
+        <p class="lede reveal" style="--d:2">A specialist dental clinic upstairs at Century the Movie Plaza&nbsp;2, by BTS&nbsp;On&nbsp;Nut. We listen, explain everything before we start, and keep you comfortable the whole way.</p>
+        <div class="actions reveal" style="--d:3">
+          <a class="btn" href="contact.html#book">Book a visit</a>
+          <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+        </div>
+        <p class="rating reveal" style="--d:4"><span class="stars" aria-hidden="true">★★★★★</span> <b>4.7</b> from 388 Google reviews</p>
+        <div class="ask reveal" style="--d:4">
+          <p class="ask__q">What brings you in today?</p>
+          <ul class="ask__list">
               <li><a href="contact.html?service=checkup#book">Check-up</a></li>
               <li><a href="contact.html?service=cleaning#book">Cleaning</a></li>
               <li><a href="contact.html?service=braces#book">Braces</a></li>
               <li><a href="contact.html?service=implant#book">Implants</a></li>
               <li><a href="contact.html?service=whitening#book">Whitening</a></li>
               <li><a class="ask__urgent" href="contact.html?service=pain#book">Tooth pain</a></li>
-            </ul>
-          </div>
+          </ul>
         </div>
-
-        <aside class="hero__card reveal" style="--d:5" aria-label="Google rating">
-          <p class="hero__score"><b>4.7</b><span class="stars" aria-hidden="true">★★★★★</span></p>
-          <p class="hero__reviews">388 Google reviews</p>
-          <p class="hero__quote" lang="en">“The clinic is clean, the doctor gives good advice, and the staff are lovely.”</p>
-          <p class="hero__by"><span class="avatar" aria-hidden="true">IQ</span>Ikk Que · Local Guide</p>
-        </aside>
       </div>
+      <figure class="hero__photo reveal" style="--d:2">
+        <img src="images/hero-photo.jpg" alt="A smiling patient during a dental check-up" width="1000" height="800" fetchpriority="high" />
+      </figure>
     </section>
 
     <ul class="glance reveal" style="--d:5" aria-label="Clinic at a glance">
@@ -133,7 +121,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Why patients stay</p>
+        <p class="eyebrow">Why patients stay</p>
         <h2>A dental visit that <em>feels easy.</em></h2>
         <p class="head__aside">Going to the dentist can be stressful. We try hard to make it the opposite.</p>
       </header>
@@ -158,7 +146,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Treatments</p>
+        <p class="eyebrow">Treatments</p>
         <h2>Everything your smile needs, <em>under one roof.</em></h2>
         <a class="link head__link" href="treatments.html">See all treatments →</a>
       </header>
@@ -191,11 +179,10 @@
 
     <section class="section split">
       <div class="split__media reveal-on-scroll">
-        <span class="moon" aria-hidden="true"></span>
         <figure class="photo photo--soft"><img src="images/treatment-room.jpg" alt="Our treatment room with an orange dental chair" loading="lazy" /></figure>
       </div>
       <div class="split__copy reveal-on-scroll">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Our dentists</p>
+        <p class="eyebrow">Our dentists</p>
         <h2>The right specialist, <em>every time.</em></h2>
         <p>Braces are fitted by a dentist who does braces. Implants are placed by one who places implants. Your case goes to the person trained for it — and the same hands look after you at every follow-up.</p>
         <ul class="tags">
@@ -207,7 +194,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>The clinic</p>
+        <p class="eyebrow">The clinic</p>
         <h2>Bright, calm and <em>spotlessly clean.</em></h2>
         <a class="link head__link" href="clinic.html">Take a look inside →</a>
       </header>
@@ -220,7 +207,7 @@
 
     <section class="section reviews">
       <header class="head head--center">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>Kind words</p>
+        <p class="eyebrow">Kind words</p>
         <h2>What our patients <em>tell others.</em></h2>
       </header>
       <div class="reviews__grid">

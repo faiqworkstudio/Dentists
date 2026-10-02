@@ -55,10 +55,9 @@
     </defs>
   </svg>
 
-  <header class="nav nav--over" data-nav>
+  <header class="nav" data-nav>
     <a class="logo" href="index.html" aria-label="บางกอกเดนทัลแคร์ — หน้าแรก">
       <img class="logo__dark" src="../images/logo.svg" alt="Bangkok Dental Care" width="578" height="196" />
-      <img class="logo__light" src="../images/logo-light.svg" alt="" width="578" height="196" />
     </a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
       <span class="sr-only">เมนู</span><span class="nav__bars" aria-hidden="true"></span>
@@ -79,41 +78,30 @@
 
   <main id="main">
     <section class="hero">
-      <picture class="hero__bg">
-        <source media="(max-width: 860px)" srcset="../images/hero-mobile.jpg" />
-        <img src="../images/hero.jpg" alt="" fetchpriority="high" />
-      </picture>
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <p class="hello reveal" style="--d:0">
-            <span class="pill"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>เปิดทุกวัน · ถึง 20:00 น.</span></span>
-          </p>
-          <h1 class="reveal" style="--d:1">ทันตแพทย์ใจดี<br /><em>ทำฟันอย่างสบายใจ</em></h1>
-          <p class="lede reveal" style="--d:2">คลินิกทันตกรรมเฉพาะทาง ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 ใกล้ BTS อ่อนนุช เรารับฟัง อธิบายทุกขั้นตอนก่อนเริ่มรักษา และดูแลให้คุณสบายใจตลอดการรักษา</p>
-          <div class="actions reveal" style="--d:3">
-            <a class="btn btn--gold" href="contact.html#book">นัดหมาย</a>
-            <a class="btn btn--glass" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
-          </div>
-          <div class="ask reveal" style="--d:4">
-            <p class="ask__q">วันนี้ให้เราดูแลเรื่องไหนดี?</p>
-            <ul class="ask__list">
+      <div class="hero__copy">
+        <p class="pill reveal" style="--d:0"><span class="pill__dot" aria-hidden="true"></span><span data-open-status>เปิดทุกวัน · ถึง 20:00 น.</span></p>
+        <h1 class="reveal" style="--d:1">ทันตแพทย์ใจดี<br /><em>ทำฟันอย่างสบายใจ</em></h1>
+        <p class="lede reveal" style="--d:2">คลินิกทันตกรรมเฉพาะทาง ชั้น 3 เซ็นจูรี เดอะ มูฟวี่ พลาซ่า 2 ใกล้ BTS อ่อนนุช เรารับฟัง อธิบายทุกขั้นตอนก่อนเริ่มรักษา และดูแลให้คุณสบายใจตลอดการรักษา</p>
+        <div class="actions reveal" style="--d:3">
+          <a class="btn" href="contact.html#book">นัดหมาย</a>
+          <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+        </div>
+        <p class="rating reveal" style="--d:4"><span class="stars" aria-hidden="true">★★★★★</span> <b>4.7</b> จากรีวิว Google 388 รายการ</p>
+        <div class="ask reveal" style="--d:4">
+          <p class="ask__q">วันนี้ให้เราดูแลเรื่องไหนดี?</p>
+          <ul class="ask__list">
               <li><a href="contact.html?service=checkup#book">ตรวจฟัน</a></li>
               <li><a href="contact.html?service=cleaning#book">ขูดหินปูน</a></li>
               <li><a href="contact.html?service=braces#book">จัดฟัน</a></li>
               <li><a href="contact.html?service=implant#book">รากฟันเทียม</a></li>
               <li><a href="contact.html?service=whitening#book">ฟอกสีฟัน</a></li>
               <li><a class="ask__urgent" href="contact.html?service=pain#book">ปวดฟัน</a></li>
-            </ul>
-          </div>
+          </ul>
         </div>
-
-        <aside class="hero__card reveal" style="--d:5" aria-label="คะแนนรีวิว Google">
-          <p class="hero__score"><b>4.7</b><span class="stars" aria-hidden="true">★★★★★</span></p>
-          <p class="hero__reviews">จากรีวิว Google 388 รายการ</p>
-          <p class="hero__quote" lang="en">“The clinic is clean, the doctor gives good advice, and the staff are lovely.”</p>
-          <p class="hero__by"><span class="avatar" aria-hidden="true">IQ</span>Ikk Que · Local Guide</p>
-        </aside>
       </div>
+      <figure class="hero__photo reveal" style="--d:2">
+        <img src="../images/hero-photo.jpg" alt="ผู้ป่วยยิ้มระหว่างการตรวจฟัน" width="1000" height="800" fetchpriority="high" />
+      </figure>
     </section>
 
     <ul class="glance reveal" style="--d:5" aria-label="ข้อมูลคลินิก">
@@ -133,7 +121,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>ทำไมผู้ป่วยไว้ใจเรา</p>
+        <p class="eyebrow">ทำไมผู้ป่วยไว้ใจเรา</p>
         <h2>การทำฟันที่<em>สบายใจกว่าที่คิด</em></h2>
         <p class="head__aside">การไปหาหมอฟันอาจทำให้กังวล เราตั้งใจให้ทุกครั้งเป็นประสบการณ์ที่สบายใจ</p>
       </header>
@@ -158,7 +146,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>บริการของเรา</p>
+        <p class="eyebrow">บริการของเรา</p>
         <h2>ครบทุกการดูแล<em>ในที่เดียว</em></h2>
         <a class="link head__link" href="treatments.html">ดูบริการทั้งหมด →</a>
       </header>
@@ -191,11 +179,10 @@
 
     <section class="section split">
       <div class="split__media reveal-on-scroll">
-        <span class="moon" aria-hidden="true"></span>
         <figure class="photo photo--soft"><img src="../images/treatment-room.jpg" alt="ห้องทำฟันพร้อมเก้าอี้ทำฟันสีส้ม" loading="lazy" /></figure>
       </div>
       <div class="split__copy reveal-on-scroll">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>ทันตแพทย์ของเรา</p>
+        <p class="eyebrow">ทันตแพทย์ของเรา</p>
         <h2>ทันตแพทย์เฉพาะทาง<em>ตรงกับทุกเคส</em></h2>
         <p>งานจัดฟันดูแลโดยทันตแพทย์จัดฟัน งานรากฟันเทียมดูแลโดยทันตแพทย์ที่เชี่ยวชาญด้านรากฟันเทียม ทุกเคสได้รับการดูแลจากผู้เชี่ยวชาญตรงสาขา และติดตามผลโดยทันตแพทย์ท่านเดิมทุกครั้ง</p>
         <ul class="tags">
@@ -207,7 +194,7 @@
 
     <section class="section">
       <header class="head">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>คลินิกของเรา</p>
+        <p class="eyebrow">คลินิกของเรา</p>
         <h2>สว่าง สงบ และ<em>สะอาดทุกมุม</em></h2>
         <a class="link head__link" href="clinic.html">ชมภายในคลินิก →</a>
       </header>
@@ -220,7 +207,7 @@
 
     <section class="section reviews">
       <header class="head head--center">
-        <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#spark" /></svg>รีวิวจากผู้ป่วย</p>
+        <p class="eyebrow">รีวิวจากผู้ป่วย</p>
         <h2>เสียงจาก<em>ผู้ป่วยของเรา</em></h2>
       </header>
       <div class="reviews__grid">

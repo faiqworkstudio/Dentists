@@ -17,7 +17,7 @@ Patient reviews are shown in their original English on both versions (the Thai p
 Shared styles in `styles.css`, behaviour (mobile menu, open/closed badge, scroll reveals, booking form — messages switch to Thai on Thai pages) in `script.js`. The header, call-to-action band and footer are repeated in each page — edit all ten when changing them.
 
 ## Design
-Built from the logo on the clinic's marble wall: a white tooth cradled by a thin gold crescent, gold sparkles and a chocolate-brown wordmark. The site uses the same palette (marble white, gold, chocolate), rounded shapes, and warm, plain-spoken copy. Fonts (Google Fonts): **K2D** for headings in both languages (its rounded-square letters match the wordmark), **Figtree** for English body text and **IBM Plex Sans Thai Looped** for Thai body text (looped Thai letters read most clearly and formally in paragraphs). Thai pages use taller line spacing so stacked vowels and tone marks don't collide.
+Built from the logo on the clinic's marble wall: a white tooth cradled by a thin gold crescent, gold sparkles and a chocolate-brown wordmark. The site uses the same palette (marble white, gold, chocolate), simple rounded shapes, no decorative overlays, and warm, plain-spoken copy. Fonts (Google Fonts): **K2D** for headings in both languages (its rounded-square letters match the wordmark), **Figtree** for English body text and **IBM Plex Sans Thai Looped** for Thai body text (looped Thai letters read most clearly and formally in paragraphs). Thai pages use taller line spacing so stacked vowels and tone marks don't collide.
 
 ### Logo files (transparent, vector)
 - `images/logo.svg` — full logo, chocolate wordmark, for light backgrounds
@@ -27,14 +27,8 @@ Built from the logo on the clinic's marble wall: a white tooth cradled by a thin
 These are a vector redraw of the wall logo; if the clinic has the original artwork, swap it in under the same names.
 
 ## Images
-### Homepage hero background
-The home hero is a full-width photo with the text on top. Replace these two files (same names) with your final photo:
-- `images/hero.jpg` — desktop, **2560 × 1100 px** (landscape). Keep the subject on the right half; the left half sits under the headline and a dark overlay.
-- `images/hero-mobile.jpg` — phones, **1080 × 1440 px** (portrait, 3:4), face in the upper half.
-
-The current photo (patient in the dental chair) was supplied at 600 × 399 px and enlarged, so it looks soft on big screens — use a high-resolution copy at the same names, and make sure it's licensed for the clinic's use. On desktop the photo fills the right ~70% of the hero and fades into the dark left side under the text; on phones it shows at the top, above the text.
-
-`images/` also holds clinic photos taken from the Google Maps listing. They are small (about 600px wide), so replace them with the clinic's original files at the same names when possible. Confirm the clinic is happy for these photos to be used; some Google Maps photos are uploaded by visitors rather than the owner.
+### Homepage hero photo
+The home hero is a simple two-column layout: text on the left, a plain rounded photo on the right (no overlays). Replace `images/hero-photo.jpg` with a high-resolution, licensed photo at the same name — **1600 × 1280 px (5:4)** or larger. The current photo was supplied at 600 × 399 px, so it looks soft on large screens.
 
 ## To confirm with the clinic
 - Have a native Thai speaker on the clinic team read through the Thai pages before launch.
