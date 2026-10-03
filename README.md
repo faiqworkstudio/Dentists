@@ -49,3 +49,9 @@ These are stock photos, not the clinic itself. Swap in the clinic's own photos a
 - Exact Facebook page URL (`contact.html`).
 - The friendly promises in the copy ("we listen first", "clear prices up front", "we'll do our best to fit you in" if in pain) — make sure they match how the clinic works.
 - Where booking requests should go — the form currently asks the patient to call (TODO in `script.js`).
+
+### Section photos
+`images/photos/` holds free Unsplash photos (Unsplash License) used in the sections below the heroes: implant model, aligners, dental model, X-rays, toothbrushes, a smiling team member, clinic interiors and the caring-hands photo in the "Come and say hello" band. The "Inside the clinic" carousel uses only the clinic's own photos. Replace any stock photo with the clinic's own at the same file name.
+
+### Motion
+Smooth wheel scrolling on desktop, photos that open like a curtain and drift gently (parallax) as you scroll, count-up numbers, a moving band of treatment names, a "how a visit works" line that draws itself, a draggable photo carousel, and a header that tucks away when scrolling down. All motion turns off for visitors who ask for reduced motion.

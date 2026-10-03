@@ -71,14 +71,28 @@
     </section>
 
 
-    <section class="section section--tight">
-      <div class="gallery">
-        <figure class="photo g1 reveal-on-scroll"><img src="../images/treatment-room.jpg" alt="ห้องทำฟันพร้อมเก้าอี้สีส้ม" loading="lazy" /><figcaption>ห้องทำฟัน</figcaption></figure>
-        <figure class="photo g2 reveal-on-scroll"><img src="../images/reception.jpg" alt="เคาน์เตอร์ต้อนรับและที่นั่งรอ" loading="lazy" /><figcaption>เคาน์เตอร์ต้อนรับ</figcaption></figure>
-        <figure class="photo g3 reveal-on-scroll"><img src="../images/xray.jpg" alt="เครื่องเอกซเรย์ฟันพานอรามิก" loading="lazy" /><figcaption>เอกซเรย์พานอรามิก</figcaption></figure>
-        <figure class="photo g4 reveal-on-scroll"><img src="../images/storefront.jpg" alt="หน้าคลินิกพร้อมโลโก้พระจันทร์เสี้ยว" loading="lazy" /><figcaption>หน้าคลินิก</figcaption></figure>
+
+    <section class="section gallery-x">
+      <header class="head">
+        <p class="eyebrow">ชมรอบคลินิก</p>
+        <h2>คลินิกของเรา<em>ตามจริง</em></h2>
+      </header>
+      <div class="carousel" data-carousel>
+        <div class="carousel__track" tabindex="0" aria-label="ภาพคลินิก — เลื่อนดูด้านข้าง">
+        <figure class="slide"><img src="../images/treatment-room.jpg" alt="ห้องทำฟัน" loading="lazy" draggable="false" /><figcaption>ห้องทำฟัน</figcaption></figure>
+        <figure class="slide"><img src="../images/reception.jpg" alt="เคาน์เตอร์ต้อนรับ" loading="lazy" draggable="false" /><figcaption>เคาน์เตอร์ต้อนรับ</figcaption></figure>
+        <figure class="slide"><img src="../images/xray.jpg" alt="เอกซเรย์พานอรามิก" loading="lazy" draggable="false" /><figcaption>เอกซเรย์พานอรามิก</figcaption></figure>
+        <figure class="slide"><img src="../images/sterilisation.jpg" alt="การฆ่าเชื้อ" loading="lazy" draggable="false" /><figcaption>การฆ่าเชื้อ</figcaption></figure>
+        <figure class="slide"><img src="../images/storefront.jpg" alt="หน้าคลินิก" loading="lazy" draggable="false" /><figcaption>หน้าคลินิก</figcaption></figure>
+        <figure class="slide"><img src="../images/implant-kit.jpg" alt="ชุดเครื่องมือรากฟันเทียม" loading="lazy" draggable="false" /><figcaption>ชุดเครื่องมือรากฟันเทียม</figcaption></figure>
+        </div>
+        <div class="carousel__nav">
+          <button type="button" class="carousel__btn" data-prev aria-label="ภาพก่อนหน้า">←</button>
+          <button type="button" class="carousel__btn" data-next aria-label="ภาพถัดไป">→</button>
+        </div>
       </div>
     </section>
+
 
     <section class="section">
       <header class="head">
@@ -105,32 +119,34 @@
       <p class="licence">คลินิกทันตกรรมบางกอกเดนทัลแคร์ · เลขที่ใบอนุญาต <b>10103005661</b></p>
     </section>
 
+
     <section class="section">
       <header class="head">
         <p class="eyebrow">เมื่อมาที่คลินิก</p>
         <h2>สิ่งที่<em>คุณจะได้พบ</em></h2>
       </header>
-      <ol class="steps">
-        <li class="step reveal-on-scroll"><span class="step__n">1</span><h3>รับฟัง</h3><p>เล่าให้เราฟังว่ากังวลเรื่องอะไร การตรวจและเอกซเรย์ช่วยให้เห็นภาพรวมทั้งหมด</p></li>
-        <li class="step reveal-on-scroll"><span class="step__n">2</span><h3>อธิบาย</h3><p>อธิบายทางเลือกด้วยภาษาที่เข้าใจง่าย และตกลงค่าใช้จ่ายกันก่อนเริ่มรักษา</p></li>
-        <li class="step reveal-on-scroll"><span class="step__n">3</span><h3>รักษาอย่างอ่อนโยน</h3><p>โดยทันตแพทย์ที่เชี่ยวชาญตรงกับเคสของคุณ ในจังหวะที่คุณสบายใจ</p></li>
-        <li class="step reveal-on-scroll"><span class="step__n">4</span><h3>ติดตามผล</h3><p>นัดติดตามและปรับแก้จนคุณรู้สึกพอดี</p></li>
+      <ol class="journey">
+        <li class="journey__line" aria-hidden="true"></li>
+        <li class="journey__step" style="--i:0"><span class="journey__n">1</span><h3>รับฟัง</h3><p>เล่าให้เราฟังว่ากังวลเรื่องอะไร การตรวจและเอกซเรย์ช่วยให้เห็นภาพรวมทั้งหมด</p></li>
+        <li class="journey__step" style="--i:1"><span class="journey__n">2</span><h3>อธิบาย</h3><p>อธิบายทางเลือกด้วยภาษาที่เข้าใจง่าย และตกลงค่าใช้จ่ายกันก่อนเริ่มรักษา</p></li>
+        <li class="journey__step" style="--i:2"><span class="journey__n">3</span><h3>รักษาอย่างอ่อนโยน</h3><p>โดยทันตแพทย์ที่เชี่ยวชาญตรงกับเคสของคุณ ในจังหวะที่คุณสบายใจ</p></li>
+        <li class="journey__step" style="--i:3"><span class="journey__n">4</span><h3>ติดตามผล</h3><p>นัดติดตามและปรับแก้จนคุณรู้สึกพอดี</p></li>
       </ol>
-
     </section>
+
   </main>
 
   <section class="cta">
-    <div class="cta__inner">
-      <img class="cta__mark" src="../images/logo-mark.svg" alt="" width="196" height="196" loading="lazy" />
+    <div class="cta__inner img-reveal">
+      <img class="cta__bg" data-parallax="0.08" src="../images/photos/caring-hands.jpg" alt="" loading="lazy" />
       <div class="cta__copy">
-        <p class="eyebrow eyebrow--light">พร้อมเมื่อไหร่ แวะมาได้เลย</p>
+        <p class="eyebrow">พร้อมเมื่อไหร่ แวะมาได้เลย</p>
         <h2>แวะมาทักทายกันได้ <em>เราพร้อมดูแลคุณ</em></h2>
         <p>เปิดทุกวันถึง 20:00 น. เดินไม่ไกลจาก BTS อ่อนนุช</p>
-      </div>
-      <div class="cta__actions">
-        <a class="btn btn--gold" href="contact.html#book">นัดหมาย</a>
-        <a class="btn btn--line-light" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+        <div class="actions">
+          <a class="btn" href="contact.html#book">นัดหมาย</a>
+          <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+        </div>
       </div>
     </div>
   </section>
