@@ -28,17 +28,17 @@ These are a vector redraw of the wall logo; if the clinic has the original artwo
 
 ## Images
 ### Page hero images
-Every page opens with a full-width image and the page's text on its calm left side. The images are artworks made for the site (not photos), all in one style: the clinic's marble wall with soft window light and palm-leaf shadows, plus one gold-and-white object per page.
+Every page opens with a full-width photo and the page's text on the left (a soft light wash sits behind the text so it stays readable). On phones the photo sits on top and the text below.
 
-| Page | Object | Desktop (3200 px wide) | Phone |
+| Page | Photo (free, Unsplash License) | Desktop 2560 × 1200 | Phone 1200 × 1000 |
 | --- | --- | --- | --- |
-| Home | Crescent-and-tooth logo mark | `images/hero.jpg` (×1500) | `images/hero-mobile.jpg` (1200 × 1600) |
-| Treatments | Dental implant | `images/hero-treatments.jpg` (×1400) | `images/hero-treatments-mobile.jpg` (1200 × 1400) |
-| Our dentists | Tooth in a heart | `images/hero-dentists.jpg` | `images/hero-dentists-mobile.jpg` |
-| The clinic | Full logo sign | `images/hero-clinic.jpg` | `images/hero-clinic-mobile.jpg` |
-| Contact | Map pin | `images/hero-contact.jpg` | `images/hero-contact-mobile.jpg` |
+| Home | Bright clinic with orange dental chair — [photo-1598256989800](https://images.unsplash.com/photo-1598256989800-fe5f95da9787) (mirrored) | `images/hero.jpg` | `images/hero-mobile.jpg` |
+| Treatments | Hands holding a dental model — [photo-1468493858157](https://images.unsplash.com/photo-1468493858157-0da44aaf1d13) | `images/hero-treatments.jpg` | `images/hero-treatments-mobile.jpg` |
+| Our dentists | Dentist explaining an X-ray — [photo-1606811841689](https://images.unsplash.com/photo-1606811841689-23dfddce3e95) | `images/hero-dentists.jpg` | `images/hero-dentists-mobile.jpg` |
+| The clinic | Bright clinic with marble floor and palm — [photo-1631248055158](https://images.unsplash.com/photo-1631248055158-edec7a3c072b) | `images/hero-clinic.jpg` | `images/hero-clinic-mobile.jpg` |
+| Contact | Treatment room with tropical garden — [photo-1609207825181](https://images.unsplash.com/photo-1609207825181-52d3214556dd) (mirrored) | `images/hero-contact.jpg` | `images/hero-contact-mobile.jpg` |
 
-To use photos instead, replace the files at the same sizes: keep the left ~45% calm on desktop (the text sits there) and put the subject in the top half of the phone version.
+These are stock photos, not the clinic itself. Swap in the clinic's own photos at the same sizes when available (subject on the right on desktop).
 
 ## To confirm with the clinic
 - Have a native Thai speaker on the clinic team read through the Thai pages before launch.
