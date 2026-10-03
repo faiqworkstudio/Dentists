@@ -29,7 +29,7 @@
     </defs>
   </svg>
 
-  <header class="nav" data-nav>
+  <header class="nav nav--over" data-nav>
     <a class="logo" href="index.html" aria-label="Bangkok Dental Care — home">
       <img class="logo__dark" src="images/logo.svg" alt="Bangkok Dental Care" width="578" height="196" />
     </a>
@@ -52,14 +52,21 @@
 
   <main id="main">
 
-    <section class="page-hero">
-      <div class="page-hero__copy">
-        <p class="eyebrow reveal" style="--d:0">Our dentists</p>
-        <h1 class="reveal" style="--d:1">The right specialist, <em>gentle hands.</em></h1>
-        <p class="lede reveal" style="--d:2">Bangkok Dental Care is a dental specialist clinic. Each case is matched to the dentist trained for it — so your treatment is planned properly, done gently, and followed up by the same person.</p>
-      </div>
-      <div class="page-hero__media reveal" style="--d:2">
-        <figure class="photo photo--soft"><img src="images/treatment-room.jpg" alt="Our treatment room with an orange dental chair" /></figure>
+    <section class="hero hero--page">
+      <picture class="hero__bg">
+        <source media="(max-width: 860px)" srcset="images/hero-dentists-mobile.jpg" />
+        <img src="images/hero-dentists.jpg" alt="" width="3200" height="1400" fetchpriority="high" />
+      </picture>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal" style="--d:0">Our dentists</p>
+          <h1 class="reveal" style="--d:1">The right specialist, <em>gentle hands.</em></h1>
+          <p class="lede reveal" style="--d:2">Bangkok Dental Care is a dental specialist clinic. Each case is matched to the dentist trained for it — so your treatment is planned properly, done gently, and followed up by the same person.</p>
+          <div class="actions reveal" style="--d:3">
+            <a class="btn" href="contact.html#book">Book a visit</a>
+            <a class="btn btn--line" href="tel:+66641965596"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 064 196 5596</a>
+          </div>
+        </div>
       </div>
     </section>
 

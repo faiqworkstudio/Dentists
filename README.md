@@ -27,12 +27,18 @@ Built from the logo on the clinic's marble wall: a white tooth cradled by a thin
 These are a vector redraw of the wall logo; if the clinic has the original artwork, swap it in under the same names.
 
 ## Images
-### Homepage hero image
-The home hero is a full-width image with the text on its calm left side. The image is an artwork made for the site (not a photo): the clinic's marble wall with the gold crescent logo sign, soft window light and palm-leaf shadows.
-- `images/hero.jpg` — desktop, 3200 × 1500 px; keep the left ~45% calm and light, since the text sits there.
-- `images/hero-mobile.jpg` — phones, 1200 × 1600 px; the sign sits in the top third and the text sits below it.
+### Page hero images
+Every page opens with a full-width image and the page's text on its calm left side. The images are artworks made for the site (not photos), all in one style: the clinic's marble wall with soft window light and palm-leaf shadows, plus one gold-and-white object per page.
 
-To use a photo instead, replace these two files with the same sizes and layout (subject on the right on desktop, at the top on phones).
+| Page | Object | Desktop (3200 px wide) | Phone |
+| --- | --- | --- | --- |
+| Home | Crescent-and-tooth logo mark | `images/hero.jpg` (×1500) | `images/hero-mobile.jpg` (1200 × 1600) |
+| Treatments | Dental implant | `images/hero-treatments.jpg` (×1400) | `images/hero-treatments-mobile.jpg` (1200 × 1400) |
+| Our dentists | Tooth in a heart | `images/hero-dentists.jpg` | `images/hero-dentists-mobile.jpg` |
+| The clinic | Full logo sign | `images/hero-clinic.jpg` | `images/hero-clinic-mobile.jpg` |
+| Contact | Map pin | `images/hero-contact.jpg` | `images/hero-contact-mobile.jpg` |
+
+To use photos instead, replace the files at the same sizes: keep the left ~45% calm on desktop (the text sits there) and put the subject in the top half of the phone version.
 
 ## To confirm with the clinic
 - Have a native Thai speaker on the clinic team read through the Thai pages before launch.
